@@ -1,0 +1,3 @@
+subject_id,trial_id,spike_count,stimulus
+mouse_001,trial_001,4,A
+mouse_001,trial_002,7,B

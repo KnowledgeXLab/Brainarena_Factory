@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "neuro-dataset-factory"
+version = "0.4.0"
+description = "Dataset-centric neuroscience data and training-task construction pipeline."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+s3 = ["boto3>=1.28,<2"]
+test = ["pytest>=7"]
+all = ["boto3>=1.28,<2", "pytest>=7"]
+
+[project.scripts]
+neuro-dataset-factory = "neuro_dataset_factory.cli:main"
+neuro-dataset-download = "neuro_dataset_factory.ops.download_remote_payloads:main"
+neuro-dataset-finalize-payloads = "neuro_dataset_factory.ops.build_completed_remote_delivery:main"
+neuro-dataset-build-delta = "neuro_dataset_factory.ops.build_remote_delta:main"
+neuro-dataset-merge-releases = "neuro_dataset_factory.ops.merge_remote_brainarena:main"
+neuro-dataset-redact-titles = "neuro_dataset_factory.ops.redact_public_paper_titles:main"
+neuro-dataset-complete-figures = "neuro_dataset_factory.ops.complete_figure_mappings:main"
+neuro-dataset-jsonl = "neuro_dataset_factory.ops.remote_jsonl_tools:main"
+neuro-dataset-resolve-dois = "neuro_dataset_factory.ops.resolve_datacite_candidates:main"
+
+[tool.setuptools.packages.find]
+include = ["neuro_dataset_factory*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

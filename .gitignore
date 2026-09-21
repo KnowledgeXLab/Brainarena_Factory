@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+.env
+id_ed25519
+id_ed25519.pub
+.venv/
+*.egg-info/
+work/
+state/
+payloads/
+deliveries/
+dist/
+build/

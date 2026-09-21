@@ -1,0 +1,2 @@
+{"dataset_id":"example_neuro_v1","name":"Example Open Neuroscience Dataset","version":"v1.0","local_path":"/replace/with/local/dataset","source_url":"https://example.org/dataset","doi":"10.xxxx/example","license":"CC-BY-4.0","modalities":["electrophysiology"],"species":["mouse"],"task_domains":["perception"],"high_value_questions":["How does population activity encode stimulus identity?"]}
+
