@@ -1,6 +1,6 @@
 # Neuro Dataset Factory
 
-这是经过清理的神经科学数据与训练任务生成管线。目录只包含可复用代码、运维命令、
+神经科学数据与训练任务生成管线。目录只包含可复用代码、运维命令、
 配置示例、数据契约文档和离线测试；不包含历史 `work/`、LLM 缓存、下载 payload、凭据或
 机器绑定的实验 case。
 
@@ -13,8 +13,6 @@
 | 本地 canonical | 本地完整数据集 + 已审核论文关联 | reference verified canonical package | 通过全部 audit 后可以 |
 | 远程 acquisition | 论文语料中的数据链接 | `awaiting_data_download` provisional package | 不可以；先下载 payload、执行 reference |
 
-不要把 `REMOTE_DATA_LOCATOR.json` 当成原始数据。远程流程生成的任务默认
-`enabled=false`，即使格式审计通过，也只表示数据定位和任务结构有效。
 
 ## 安装
 
@@ -105,7 +103,7 @@ pytest -q
 
 ## 文档导航
 
-- [团队接入说明](docs/INTEGRATION.md)：安装边界、稳定接口、状态与安全约束。
+- [接入说明](docs/INTEGRATION.md)：安装边界、稳定接口、状态与安全约束。
 - [远程数据管线](docs/REMOTE_PIPELINE.md)：从论文语料到下载、完成态交付的命令链。
 - [本地 canonical 管线](docs/LOCAL_PIPELINE.md)：从数据 profile 到 reference 和导出。
 - [数据契约](docs/DATA_CONTRACTS.md)：主要 JSON/JSONL 的生产者、消费者和状态语义。
