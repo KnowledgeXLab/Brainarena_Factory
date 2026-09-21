@@ -1,4 +1,4 @@
-# Neuro Dataset Factory — 团队交接版
+# Neuro Dataset Factory
 
 这是经过清理的神经科学数据与训练任务生成管线。目录只包含可复用代码、运维命令、
 配置示例、数据契约文档和离线测试；不包含历史 `work/`、LLM 缓存、下载 payload、凭据或
